@@ -1,0 +1,28 @@
+.summary{
+    font-family: 'Oswald',sans-serif;
+    background-color: #DBE9EE;
+    box-sizing: border-box;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 50px;
+}
+
+.choice_box{
+    font-family: 'Oswald',sans-serif;
+    background-color: #DBE9EE;
+    box-sizing: border-box;
+    border: 1px solid #466995;
+    margin: 20px;
+    padding:20px;
+    position:relative;
+    top:100px;
+    width: fit-content;
+    display: inline-block;
+}
+
+.choice_box:hover {
+    background-color: #004E89;
+    border-color: #004E89;
+  }
