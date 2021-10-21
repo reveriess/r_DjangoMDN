@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'style_post.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Stories</title>
+  </head>
+  <body>
+    <div class="header">
+    <a class="buttonn" href="{% url 'home' %}"
+    ><button type="button">Back</button></a>
+    <h1> Stories </h1>
+    </div>
+    <div class="stories">
+      {% for post in posts %}
+      <div class="post">
+        <details>
+        <summary>
+        <div class="posttitle">{{post.title}}</div>
+        <div class="postdate">{{post.date}}</div>
+        <div class="postsummary">{{post.summary}}</div>
+        </summary>
+        <div class="posttext">{{post.text}}</div>
+        </details>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
