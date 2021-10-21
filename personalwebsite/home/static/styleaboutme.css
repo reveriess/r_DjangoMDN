@@ -1,0 +1,51 @@
+* {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+.title{
+    color:#E85A4F;
+    font-weight: bold;
+    font-size: larger;
+    width: 60%;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+}
+.opening{
+    width:60%;
+    border: solid;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    top:20px;
+    position:relative;
+}
+
+.foreground{
+    position:relative;
+    border:solid;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    top:20px;
+}
+h1{
+    position:relative;
+    color:#E85A4F;
+    font-weight: bold;
+    font-size: large;
+    top: 6px;
+}
+dt {
+    position: relative;
+    font-weight: bold;
+    left:2%;
+}
+
+dl,
+dd {
+    font-size: .9rem;
+}
+
+dd {
+    margin-bottom: 1em;
+}
