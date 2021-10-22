@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500&display=swap"
       rel="stylesheet"
     />
     {%block head%} {%endblock%}
@@ -14,9 +14,7 @@
   </head>
 
   <body>
-    <div class="Header">
-      <img src="{% static 'DSC_6580.JPG'%}" class="img-hero" />
-    </div>
+    <div class="Header"></div>
 
     <div class="summary">
       <div class="summary_content">
@@ -42,6 +40,10 @@
     <div class="stories" \>
       <h2>Stories</h2>
       <div class="post_holder">{% block content %} {%endblock%}</div>
+    </div>
+
+    <div class="footer">
+      <h2> empty footer</h2>
     </div>
   </body>
 </html>

@@ -6,21 +6,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500&display=swap"
       rel="stylesheet"
     />
   </head>
   <title>About me</title>
-  <p class="title">About me</p>
-  <p class="opening">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a lacus
-    nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-    per inceptos himenaeos. Nulla convallis ultrices porta. Nunc non erat quis
-    urna molestie rhoncus. Maecenas et ligula ac ligula tempor sollicitudin ac
-    tristique libero. Sed sodales fringilla erat. Aenean eleifend sem vitae arcu
-    tincidunt, in rhoncus magna eleifend. Sed porttitor id justo vel ultrices.
-    Sed vel dignissim eros.
-  </p>
+  <div class="header">
+    <a class="button_aboutme" href="{% url 'home' %}"
+      ><button type="button">Back</button></a
+    >
+    <p class="title">About me</p>
+  </div>
+  <div class="top">
+    <p class="opening">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a lacus
+      nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+      per inceptos himenaeos. Nulla convallis ultrices porta. Nunc non erat quis
+      urna molestie rhoncus. Maecenas et ligula ac ligula tempor sollicitudin ac
+      tristique libero. Sed sodales fringilla erat. Aenean eleifend sem vitae
+      arcu tincidunt, in rhoncus magna eleifend. Sed porttitor id justo vel
+      ultrices. Sed vel dignissim eros.
+    </p>
+  </div>
   <div class="foreground">
     <h1>Education</h1>
     <dl>
