@@ -1,13 +1,15 @@
 .posttitle{
 color: #E85A4F;
-font-size: large;
+font-size: 18px;
 text-align: center;
-font-weight: bold;
+padding-bottom: 1px;
 }
 
 .postdate{
     color: #8E8D8A;
     text-align: center;
+    font-size: 15px;
+    padding-bottom: 7px;
 }
 
 .posttext{
@@ -18,7 +20,6 @@ font-weight: bold;
 .post{
     position:relative;
     padding:15px;
-    top:15px;
 }
 
 .stories{
@@ -30,7 +31,7 @@ font-weight: bold;
     margin-bottom: auto;
 }
 
-h1{
+.stories_header{
     font-size: 40px;
     font-weight: bold;
     color: #E85A4F;
@@ -39,7 +40,7 @@ h1{
 }
 
 *{
-    font: 1rem 'Fira Sans', sans-serif;
+    font-family: 'Sora', sans-serif;
 }
 
 summary{
@@ -50,19 +51,8 @@ summary{
 
 .postsummary{
     font-style: italic;
-    font-weight: 500;
-    font-size: large;
+    font-weight: 300;
+    font-size: 15px;
     text-align: center;
 }
 
-button {
-    background-color: #eae7dc;
-    color: #61605f;
-    border: thin solid;
-  }
-
-.buttonn{
-    position: absolute;
-    left:30%;
-    top:42px;
-}
