@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.shortcuts import redirect
 from home import views
 
 urlpatterns = [
+    path('',lambda request:redirect('hola/',permanent=False)),
     path('admin/', admin.site.urls),
     path('home/', views.homeview, name='home'),
     path('aboutme/', views.aboutme, name='about'),
