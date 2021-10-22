@@ -19,7 +19,7 @@ from django.shortcuts import redirect
 from home import views
 
 urlpatterns = [
-    path('',lambda request:redirect('hola/',permanent=False)),
+    path('',lambda request:redirect('home/',permanent=False)),
     path('admin/', admin.site.urls),
     path('home/', views.homeview, name='home'),
     path('aboutme/', views.aboutme, name='about'),
