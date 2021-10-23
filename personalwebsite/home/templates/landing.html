@@ -14,14 +14,12 @@
   </head>
 
   <body>
-    <div class="Header"></div>
-
-    <div class="summary">
-      <div class="summary_content">
+    <div class="opening">
+      <div class="opening_content">
         <img src="{% static '7980.jpg'%}" class="img-profile" />
         <div>
-          <h1>Sayid Achmad Munthahar</h1>
-          <p>
+          <h1 class="name">Sayid Achmad Munthahar</h1>
+          <p class="opening_paragraph">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -36,10 +34,11 @@
         ><button type="button">More about me</button></a
       >
     </div>
-
-    <div class="stories" \>
-      <h2>Stories</h2>
-      <div class="post_holder">{% block content %} {%endblock%}</div>
+    
+    <div class="stories" \> 
+      <a href="{% url 'stories_firstpage' %}">
+      <h2>Stories</h2></a>
+      <div class="post_holder"> {% include "template_stories.html" with show_button=False %} </div>
     </div>
 
     <div class="footer">

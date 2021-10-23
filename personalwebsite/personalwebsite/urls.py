@@ -24,4 +24,5 @@ urlpatterns = [
     path('home/', views.homeview, name='home'),
     path('aboutme/', views.aboutme, name='about'),
     path('stories/<int:page>', views.stories, name='stories'),
+    path('stories/1',lambda request:redirect('stories/1',permanent=False),name="stories_firstpage"),
 ]

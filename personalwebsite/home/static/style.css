@@ -1,6 +1,28 @@
 * {
   font-family: 'Sora', sans-serif;
 }
+
+body {
+  background-color: #f5f1ec;
+  height: 100%;
+}
+
+button {
+  background-color: #eae7dc;
+  color: #61605f;
+  border: thin solid;
+  position: relative;
+  left: 75%;
+  border-radius: 5px;
+  padding:2px;
+  width:150px;
+}
+
+button:hover{
+  transition: all 0.1s ease-out;
+  background-color: #388087;
+  color: white;
+}
 .img-hero {
   background-position: center;
   background-size: cover;
@@ -22,7 +44,7 @@
   margin: 20px;
 }
 
-.summary {
+.opening {
   box-sizing: border-box;
   padding: 20px;
   margin-left: auto;
@@ -35,23 +57,18 @@
   transition: width 2s, height 4s transform 2s;
 }
 
-.summary:hover {
+.opening:hover {
   transition: all 0.2s ease-out;
   box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
   background-color: white;
 }
 
-
-
-p {
-  font-size: 16px;
-  text-align: left;
-  margin-left: 18px;
-  margin-right: 10px;
-  word-spacing: 3px ;
-  font-weight: lighter;
+.opening_content {
+  display: flex;
+  align-items: center;
 }
-h1 {
+
+.name {
   font-weight: 500;
   text-align: left;
   color: #388087;
@@ -59,32 +76,22 @@ h1 {
   margin-left: 18px;
 }
 
+.opening_paragraph {
+  font-size: 16px;
+  text-align: left;
+  margin-left: 18px;
+  margin-right: 10px;
+  word-spacing: 3px ;
+  font-weight: lighter;
+}
+
+
 h2 {
   color: #388087;
   font-size: 30px;
   margin-bottom: 3px;
 }
 
-button {
-  background-color: #eae7dc;
-  color: #61605f;
-  border: thin solid;
-  position: relative;
-  left: 75%;
-  border-radius: 5px;
-  padding:2px;
-  width:150px;
-}
-
-button:hover{
-  transition: all 0.1s ease-out;
-  background-color: #388087;
-  color: white;
-}
-body {
-  background-color: #f5f1ec;
-  height: 100%;
-}
 
 .stories {
   position: relative;
@@ -95,7 +102,7 @@ body {
   width: 70%;
   overflow: scroll;
   background-color: white;
-  height:600px;
+  height:1000px;
   border-radius: 15px;
 }
 
@@ -106,12 +113,16 @@ body {
   background-color: white;
 }
 
-.summary_content {
-  display: flex;
-  align-items: center;
-}
 
-.post_holder {
+
+.home_stories {
+  position: relative;
+  top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .header {
@@ -135,4 +146,8 @@ body {
   position:relative;
   margin-top:70px;
   text-align: center;
+}
+
+a:link{
+  text-decoration: none;
 }
