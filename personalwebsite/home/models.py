@@ -21,7 +21,7 @@ class Education(models.Model):
     description = models.TextField()
 
     class Meta:
-        ordering = ["startdate"]
+        ordering = ["-startdate"]
 
     def __str__(self):
         return self.school_name
@@ -34,7 +34,7 @@ class Experiences(models.Model):
     description = models.TextField()
 
     class Meta:
-        ordering = ["startdate"]
+        ordering = ["-startdate"]
 
     def __str__(self):
         return self.exp_name
