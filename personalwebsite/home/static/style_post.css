@@ -24,20 +24,13 @@ padding-bottom: 1px;
 
 .stories{
 
-    width:70%;
+    width:80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.stories_header{
-    font-size: 40px;
-    font-weight: bold;
-    color: #E85A4F;
-    text-align: center;
-    margin-top:30px;
-}
 
 *{
     font-family: 'Sora', sans-serif;
@@ -56,3 +49,9 @@ summary{
     text-align: center;
 }
 
+h2.stories_text {
+    color: #388087;
+    font-size: 30px;
+    margin-bottom: 3px;
+text-align: center;
+  }

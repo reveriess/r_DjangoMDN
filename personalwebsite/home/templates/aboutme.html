@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content ="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styleaboutme.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,46 +30,38 @@
     </p>
   </div>
   <div class="foreground">
+
+
     <h1>Education</h1>
+
+    {% for edu in education %}
     <dl>
-      <dt>Institut Teknologi Bandung</dt>
+      <dt>{{edu.school_name}}</dt>
       <dd>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a lacus
-        nulla. Class aptent taciti sociosqu ad litora torquent
-      </dd>
-      <dt>SMA Negeri 48 Jakarta</dt>
-      <dd>
-        Aenean tincidunt, dui sed rutrum feugiat, quam lacus venenatis nunc,
-        eget vestibulum arcu mi in magna. Sed dictum
+        {{edu.description}}
       </dd>
     </dl>
+    {% endfor %}
+
+
     <h1>Experiences</h1>
+    {%for exp in experience%}
     <dl>
-      <dt>Aksantara 2020</dt>
+      <dt>{{exp.exp_name}}</dt>
       <dd>
-        Aenean tincidunt, dui sed rutrum feugiat, quam lacus venenatis nunc,
-        eget vestibulum arcu mi in magna. Sed dictum
-      </dd>
-      <dt>Aksantara 2019</dt>
-      <dd>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a lacus
-        nulla. Class aptent taciti sociosqu ad litora torquent
+        {{exp.description}}
       </dd>
     </dl>
+    {% endfor %}
+
     <h1>Current Interests</h1>
+    {%for interest in currentinterest%}
     <dl>
-      <dt>Web Development</dt>
+      <dt>{{interest.interest_name}}</dt>
       <dd>
-        Fusce suscipit convallis lorem, in scelerisque diam vehicula in. Sed
-        consectetur ornare dignissim. Quisque a erat id lorem sodales varius
-        mattis eget dui. Curabitur sollicitudin turpis non metus porttitor c
-      </dd>
-      <dt>UAV Control</dt>
-      <dd>
-        tiam at finibus nibh. Nulla vulputate ipsum placerat libero imperdiet
-        tempus id quis magna. Mauris dictum risus libero, sed hendrerit metus
-        dignissim non. Cras in sapien auctor, tincidunt nibh sit am
+       {{interest.description}}
       </dd>
     </dl>
+    {% endfor %}
   </div>
 </html>
