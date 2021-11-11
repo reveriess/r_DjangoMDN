@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content ="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'styleaboutme.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,32 +19,26 @@
     <p class="title">About me</p>
   </div>
   <div class="top">
-    <p class="opening">
-      
-    </p>
+    <p class="opening">---under construction---</p>
   </div>
   <div class="foreground">
-
-
     <h1>Education</h1>
 
     {% for edu in education %}
     <dl>
-      <dt>{{edu.school_name}}</dt>
-      <dd>
-        {{edu.description}}
-      </dd>
+      <div class="obj_title_and_date">
+        <dt class="obj_title">{{edu.school_name}}</dt>
+        <div class="obj_date">{{edu.startdate}} {{edu.enddate}}</div>
+      </div>
+      <dd class="obj_description">{{edu.description}} {% lorem 1%}</dd>
     </dl>
     {% endfor %}
 
-
-    <h1>Experiences</h1>
+    <h1>Projects and Work Experiences</h1>
     {%for exp in experience%}
     <dl>
       <dt>{{exp.exp_name}}</dt>
-      <dd>
-        {{exp.description}}
-      </dd>
+      <dd>{{exp.description}}</dd>
     </dl>
     {% endfor %}
 
@@ -52,9 +46,7 @@
     {%for interest in currentinterest%}
     <dl>
       <dt>{{interest.interest_name}}</dt>
-      <dd>
-       {{interest.description}}
-      </dd>
+      <dd>{{interest.description}}</dd>
     </dl>
     {% endfor %}
   </div>
