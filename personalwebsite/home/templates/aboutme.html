@@ -34,8 +34,9 @@
       </div>
       <dd class="obj_description">{{edu.description}}</dd>
     </dl>
-    {% endfor %} {% for exp in experience %}
+    {% endfor %}
     <h1>Projects and Work Experiences</h1>
+    {% for exp in experience %}
     <dl>
       <div class="obj_title_and_date">
         <dt class="obj_title">{{exp.school_name}}</dt>

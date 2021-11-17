@@ -10,6 +10,7 @@ django-heroku = "*"
 psycopg2-binary = "*"
 psycopg2 = "*"
 gunicorn = "*"
+pillow = "*"
 
 [dev-packages]
 

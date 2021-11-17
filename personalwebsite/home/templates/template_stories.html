@@ -3,21 +3,19 @@
 <html>
   <head>
     <link rel="stylesheet" href="{% static 'style_post.css' %}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&family=Taviraj&family=Trirong&display=swap" rel="stylesheet">
     <title>Stories</title>
   </head>
-
+<div class="post_holder"
   <body>
     <div class="header">
     {% if show_button is True %}
     <a class="buttonn" href="{% url 'home' %}"
     ><button type="button">Back</button></a>
-    <h2 class="stories_text"> Stories </h2>     {% endif %}
+    <div class="page_title"> <h2> Stories </h2></div>
+ {% endif %}
     </div>
     <div {% if show_button is False %} class="home_stories" {% else %} class="stories" {% endif %}>
       {% for post in posts %}
@@ -34,4 +32,5 @@
       {% endfor %}
     </div>
   </body>
+</div>
 </html>
