@@ -1,0 +1,88 @@
+{%load tailwind_tags%} {% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sayid Achmad M's Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    {% tailwind_css %}
+  </head>
+
+  <body class="align-middle">
+    <div class="pt-30 text-center py-4 font-bold text-6xl">About me</div>
+    <div class="pt-5 px-64 font-lora leading-relaxed">{%lorem 3 p%}</div>
+    <div class="divide-y-2 divide-dashed divide-gray-200">
+      <div></div>
+      <div>
+        <div class="pt-30 text-center py-4 font-bold text-2xl">Timeline</div>
+        <div class="timeline_holder">
+          {% regroup timeline|dictsortreversed:"year" by year as timeline_list%}
+          <!-- Year List  -->
+          <ul>
+            {%for year in timeline_list%}
+            <li>
+              <div class="font-bold text-lg pt-1 ">{{year.grouper}}</div>
+              <!-- Text List -->
+              <ul class="list-disc">
+                {% for content in year.list %}
+                <li class="font-lora">{{ content.text }}</li>
+                {% endfor %}
+              </ul>
+            </li>
+            {%endfor%}
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="pt-30 text-center py-4 font-bold text-2xl">Education</div>
+        <!-- Education holder -->
+        <div class="card_holder">
+          {% for edu in educations%}
+          <div class="card_outer">
+            <div class="card_inner">
+              <div class="p-4">
+                <header class="font-lora text-lg pb-1">
+                  {{edu.school_name}}
+                </header>
+                <p class="text-gray-500 text-left text-sm">
+                  {{edu.startdate}} - {{edu.enddate}}
+                </p>
+                <footer class="text-center space-x-5 pt-2">
+                  {{edu.description}}
+                </footer>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- Past projects holder  -->
+      <div>
+        <div class="pt-30 text-center py-4 font-bold text-2xl">Projects</div>
+        <div class="card_holder">
+          {% for exp in experiences%}
+          <div class="card_outer">
+            <div class="card_inner">
+              <div class="p-4">
+                <header class="font-lora text-lg pb-1">{{exp.exp_name}}</header>
+                <p class="text-gray-500 text-left text-sm">
+                  {{exp.startdate}} - Ongoing
+                </p>
+                <footer class="text-center space-x-5 pt-2">
+                  {{exp.description}}
+                </footer>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- Career holder  -->
+    </div>
+  </body>
+</html>

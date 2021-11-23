@@ -4,13 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
+Django = "*"
 heroku = "*"
 django-heroku = "*"
 psycopg2-binary = "*"
 psycopg2 = "*"
 gunicorn = "*"
-pillow = "*"
+Pillow = "*"
+stravalib = "*"
+django-tailwind = "*"
 
 [dev-packages]
 

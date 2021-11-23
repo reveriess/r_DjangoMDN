@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card_inner {
+  @apply rounded-lg bg-white hover:transform hover:-translate-x-1 transition duration-100  ease-in-out;
+}
+
+.card_outer {
+  @apply bg-gradient-to-r
+    from-blue-100
+    to-green-200
+    pb-0.5
+    rounded-lg;
+}
+
+.card_holder {
+  @apply flex justify-center gap-x-8 gap-y-10 items-center py-6 flex-wrap content-center px-40 max-w-6xl mx-auto
+}
+
+.timeline_holder {
+  @apply flex gap-x-8 gap-y-10 items-center py-2 flex-wrap content-center px-40 max-w-6xl mx-auto
+}

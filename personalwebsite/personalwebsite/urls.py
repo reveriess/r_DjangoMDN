@@ -16,13 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.shortcuts import redirect
-from home import views
+from landing import views
 
 urlpatterns = [
-    path('',lambda request:redirect('home/',permanent=False)),
-    path('admin/', admin.site.urls),
-    path('home/', views.homeview, name='home'),
-    path('aboutme/', views.aboutme, name='about'),
-    path('stories/<int:page>', views.stories, name='stories'),
-    path('stories/1',lambda request:redirect('stories/1',permanent=False),name="stories_firstpage"),
+    path("", lambda request: redirect("home/", permanent=False)),
+    path("admin/", admin.site.urls),
+    path("home/", views.homeview, name="landing"),
 ]
