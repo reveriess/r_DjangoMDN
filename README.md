@@ -1,4 +1,4 @@
-# r_DjangoMDN
+# My personal website
 
 
-My playground gan
+Self explanatory
