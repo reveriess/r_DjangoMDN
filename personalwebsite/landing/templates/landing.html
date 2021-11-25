@@ -13,31 +13,112 @@
     {% tailwind_css %}
   </head>
 
-  <body class="align-middle">
-    <div class="pt-30 text-center py-4 font-bold text-6xl">About me</div>
-    <div class="pt-5 px-64 font-lora leading-relaxed">{%lorem 3 p%}</div>
-    <div class="divide-y-2 divide-dashed divide-gray-200">
+  <body class="">
+    <!-- Introduction -->
+    <div
+      class="
+        mt-10
+        max-w-md
+        mx-auto
+        bg-gradient-to-r
+        from-blue-100
+        to-green-200
+        rounded-xl
+        shadow-md
+      "
+    ></div>
+    <a href="https://www.linkedin.com/in/sayidachmadm/">
+      <div
+        class="
+          max-w-md
+          mx-auto
+          bg-white
+          rounded-xl
+          shadow-sm
+          overflow-hidden
+          md:max-w-2xl
+          hover:-translate-x-1
+          transition
+          duration-100
+          ease-in-out
+        "
+      >
+        <div class="md:flex">
+          <div class="md:flex-shrink-0">
+            <img
+              class="h-48 w-full object-cover md:h-full md:w-48"
+              src="{% static '396105.jpg' %}"
+            />
+          </div>
+          <div class="p-8">
+            <div
+              class="block mt-1 text-lg leading-tight font-medium text-black"
+            >
+              Sayid Achmad Munthahar
+            </div>
+            <p class="mt-2 text-gray-500">
+              An aerospace engineering freshgrad who is interested in lots of
+              things.
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="mt-10 divide-y-2 divide-dashed divide-gray-200">
       <div></div>
+
       <div>
         <div class="pt-30 text-center py-4 font-bold text-2xl">Timeline</div>
-        <div class="timeline_holder">
+        <div class="">
           {% regroup timeline|dictsortreversed:"year" by year as timeline_list%}
           <!-- Year List  -->
           <ul>
             {%for year in timeline_list%}
-            <li>
-              <div class="font-bold text-lg pt-1 ">{{year.grouper}}</div>
-              <!-- Text List -->
-              <ul class="list-disc">
+            <li
+              class="
+                my-5
+                md:flex
+                flex-row
+                hover:-translate-x-1
+                transition
+                duration-100
+                ease-in-out
+                align-middle
+                text-center
+                bg-white
+                rounded-xl
+                shadow-sm
+                justify-center
+                flex-initial
+                mx-auto
+                max-w-max
+              "
+            >
+              <div
+                class="
+                  text-xl
+                  font-semibold
+                  bg-gray-200
+                  items-stretch
+                  rounded-l-xl
+                  py-5
+                  px-6
+                "
+              >
+                {{year.grouper}}
+              </div>
+              <ul class="md:flex-shrink-0 py-5 px-10">
                 {% for content in year.list %}
-                <li class="font-lora">{{ content.text }}</li>
+                <li class="font-lora list-disc">{{ content.text }}</li>
                 {% endfor %}
               </ul>
+              <!-- Text List -->
             </li>
             {%endfor%}
           </ul>
         </div>
       </div>
+
       <div>
         <div class="pt-30 text-center py-4 font-bold text-2xl">Education</div>
         <!-- Education holder -->
@@ -50,7 +131,7 @@
                   {{edu.school_name}}
                 </header>
                 <p class="text-gray-500 text-left text-sm">
-                  {{edu.startdate}} - {{edu.enddate}}
+                  {{edu.startdate|date:"Y"}} - {{edu.enddate|date:"Y"}}
                 </p>
                 <footer class="text-center space-x-5 pt-2">
                   {{edu.description}}
@@ -71,10 +152,10 @@
               <div class="p-4">
                 <header class="font-lora text-lg pb-1">{{exp.exp_name}}</header>
                 <p class="text-gray-500 text-left text-sm">
-                  {{exp.startdate}} - Ongoing
+                  {{exp.startdate|date:"M Y"}}
                 </p>
                 <footer class="text-center space-x-5 pt-2">
-                  {{exp.description}}
+                  {{exp.description|date:"M Y"}}
                 </footer>
               </div>
             </div>
